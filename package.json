@@ -1,0 +1,34 @@
+{
+  "name": "@airport-discovery/airport-diagram",
+  "version": "1.0.0",
+  "description": "Airport Runways Diagram ✈️",
+  "main": "index.js",
+  "repository": "https://github.com/Airport-Discovery/airport-diagram.git",
+  "author": {
+    "name": "Airport Discovery",
+    "email": "hello@airportdiscovery.com",
+    "url": "https://github.com/Airport-Discovery"
+  },
+  "bugs": {
+    "url": "https://github.com/Airport-Discovery/airport-diagram/issues"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/Airport-Discovery/airport-diagram#readme",
+  "keywords": [
+    "airport",
+    "airports",
+    "airfield",
+    "airfields",
+    "runway",
+    "runways",
+    "diagram",
+    "diagrams",
+    "chart",
+    "charts",
+    "svg",
+    "aviation",
+    "pilot",
+    "floor plan",
+    "floorplan"
+  ]
+}
