@@ -1,6 +1,6 @@
 {
   "name": "@airport-discovery/airport-diagram",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Airport runways diagram based on Geo Coordinates 📍 for React.",
   "main": "lib/index.js",
   "repository": "https://github.com/Airport-Discovery/airport-diagram.git",
@@ -19,7 +19,6 @@
     "gh-pages:deploy": "gh-pages -d docs/build",
     "build": "cross-env NODE_ENV=production rollup -c",
     "publish": "npm publish --access public",
-    "prepublishOnly": "yarn build",
     "postpublish": "yarn build-gh-pages && yarn gh-pages:deploy",
     "release-patch": "yarn version --patch",
     "release-minor": "yarn version --minor",
