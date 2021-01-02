@@ -13,7 +13,7 @@ each Runway has a starting and ending point, for example _Malpensa_ airport has 
 - Ending point: `45.61575` `8.73749722`
 
 ```image
-src: "/assets/mxp-17l-35r.png"
+src: "/assets/mxp-17l-35r.jpg"
 plain: true
 title: Malpensa MXP 17L/35R
 ```
@@ -24,7 +24,7 @@ title: Malpensa MXP 17L/35R
 - Ending point: `45.611074` `8.728277`
 
 ```image
-src: "/assets/mxp-17r-35l.png"
+src: "/assets/mxp-17r-35l.jpg"
 plain: true
 title: Malpensa MXP 17R/35L
 ```
