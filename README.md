@@ -1,6 +1,6 @@
 # Airport Diagram
 
-Airport runways diagram based on Geo Coordinates for React.
+Airport runways diagram based on Geo Coordinates 📍 for React.
 
 Please read the [documentation](https://diagram.airportdiscovery.com) and check out the [demo](https://diagram.airportdiscovery.com/#/demo) for more usage instructions.
 
