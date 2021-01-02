@@ -2,7 +2,7 @@
 
 Airport runways diagram based on Geo Coordinates 📍 for React.
 
-Please read the [documentation](https://diagram.airportdiscovery.com) and check out the [demo](https://diagram.airportdiscovery.com/#/demo) for more usage instructions.
+Please read the [documentation](https://airport-discovery.github.io/airport-diagram/) and check out the [demo](https://airport-discovery.github.io/airport-diagram/#/demo) for more usage instructions.
 
 ## Installation
 
@@ -16,7 +16,7 @@ Please read the [documentation](https://diagram.airportdiscovery.com) and check 
 
 ## Documentation
 
-Please read the [documentation](https://diagram.airportdiscovery.com) and check out the [demo](https://diagram.airportdiscovery.com/#/demo) for more usage instructions.
+Please read the [documentation](https://airport-discovery.github.io/airport-diagram/) and check out the [demo](https://airport-discovery.github.io/airport-diagram/#/demo) for more usage instructions.
 
 ## Usage
 

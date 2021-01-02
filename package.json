@@ -15,11 +15,11 @@
   "license": "MIT",
   "scripts": {
     "start": "catalog start docs",
-    "gh-pages": "catalog build docs",
+    "build-gh-pages": "catalog build docs --public-url=/airport-diagram/",
     "gh-pages:deploy": "gh-pages -d docs/build",
     "build": "cross-env NODE_ENV=production rollup -c",
     "prepublishOnly": "build",
-    "postpublish": "yarn gh-pages && yarn gh-pages:deploy"
+    "postpublish": "yarn build-gh-pages && yarn gh-pages:deploy"
   },
   "peerDependencies": {
     "react": ">=15.0.0",
