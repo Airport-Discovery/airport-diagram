@@ -1,0 +1,46 @@
+.airport-diagram-tooltip {
+  position: absolute;
+  background: #fff;
+  border: 1px solid #4a4a4a;
+  border-radius: 5px;
+  padding: 5px;
+  display: block;
+  color: #4a4a4a;
+  font: 16px sans-serif;
+  min-width: 100px;
+  text-align: center;
+}
+
+.runway-text {
+  font: 13px sans-serif;
+  fill: #4a4a4a;
+}
+
+.runway-g {
+  transition: 1s all;
+}
+
+.runway-g:hover {
+  cursor: pointer;
+}
+
+.runway-rect {
+  fill: #dedede;
+  stroke: #8b969a;
+  stroke-width: 1;
+}
+
+.runway-line {
+  stroke: #01a553;
+  stroke-width: 3;
+}
+
+div.textSizer {
+  font: 13px sans-serif;
+  position: absolute;
+  float: left;
+  white-space: nowrap;
+  visibility: hidden;
+  width: auto;
+  height: auto;
+}

@@ -1,0 +1,43 @@
+.container {
+  display: flex;
+}
+
+.airport-card {
+  background-color: #033d55;
+  width: 500px;
+  border-radius: 10px;
+  padding: 30px;
+  margin: 5px;
+}
+
+.airport-runway {
+  stroke: #d2d7d8;
+  fill: #d2d7d8;
+  stroke-width: 0;
+}
+
+.airport-text {
+  fill: #d2d7d8;
+}
+
+.airport-pi {
+  stroke: #77b7bf;
+  stroke-width: 3;
+}
+
+.airport-name {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 50px;
+  font-weight: 600;
+  color: #d2d7d8;
+  font-family: sans-serif;
+}
+
+.airport-desc {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 16px;
+  color: #d2d7d8;
+  font-family: sans-serif;
+}
