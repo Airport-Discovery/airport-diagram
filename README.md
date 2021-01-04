@@ -49,6 +49,15 @@ import '@airport-discovery/airport-diagram/lib/styles.css';
 
 Then go to `http://localhost:4000` where you can see the documentation and test the modifications.
 
+## Developers
+
+- [Hatem Alimam](https://github.com/hatemalimam)
+
+## Credits
+
+- [Jan Stránský](https://github.com/stranskyjan): [Geo Coordinates offset](https://stackoverflow.com/questions/65505515/geo-coordinates-offset-airport-runways-diagram/65509396)
+- [Greg Grothaus](https://github.com/Gregable): [svg-airports](https://github.com/Gregable/svg-airports)
+
 ## License
 
 MIT ©
