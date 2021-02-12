@@ -13,6 +13,9 @@ class Airport extends React.Component {
 
     this.onTooltipShow = this.onTooltipShow.bind(this);
     this.onTooltipHide = this.onTooltipHide.bind(this);
+    this.adjustTextCollisions = this.adjustTextCollisions.bind(this);
+
+    this.adjusted = {};
 
     this.state = {
       showTooltip: false,
@@ -20,6 +23,56 @@ class Airport extends React.Component {
       tooltipLeft: '',
       tooltipText: '',
     };
+  }
+
+  adjustTextCollisions() {
+    const runwaysTexts = document.getElementsByClassName('runway-id');
+    for (let i = 0; i < runwaysTexts.length; i++) {
+      for (let j = 0; j < runwaysTexts.length; j++) {
+        const self = runwaysTexts[i];
+        const selfBoundingRect = self.getBoundingClientRect();
+        const that = runwaysTexts[j];
+        if (self != that) {
+          const thatBoundingRect = that.getBoundingClientRect();
+          if (
+            !(
+              thatBoundingRect.left > selfBoundingRect.right ||
+              thatBoundingRect.right < selfBoundingRect.left ||
+              thatBoundingRect.top > selfBoundingRect.bottom ||
+              thatBoundingRect.bottom < selfBoundingRect.top
+            )
+          ) {
+            const id = that.getAttribute('data-id');
+            if (!this.adjusted[id]) {
+              const style = window.getComputedStyle(that);
+              const matrix = new WebKitCSSMatrix(style.transform);
+
+              const isNegative = Math.sign(matrix.m42) === -1;
+
+              const transform = that.getAttribute('transform');
+              const hasRotate = transform.includes('rotate(180)');
+
+              let translate;
+              if (!isNegative) {
+                translate = matrix.m42 + 20;
+              } else {
+                translate = matrix.m42 - 20;
+              }
+
+              if (hasRotate)
+                that.setAttribute('transform', `translate(0, ${translate}) rotate(180)`);
+              else that.setAttribute('transform', `translate(0, ${translate})`);
+              this.adjusted[id] = true;
+              this.adjusted[self.getAttribute('data-id')] = true;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  componentDidMount() {
+    this.adjustTextCollisions();
   }
 
   onTooltipShow(event, text) {
@@ -95,7 +148,7 @@ class Airport extends React.Component {
     const minDimension = Math.min(VIEW_BOX_WIDTH, VIEW_BOX_HEIGHT);
 
     // ratio of the runways
-    this.ratio = (1 / maxRunwayLen) * (minDimension - 200);
+    this.ratio = (1 / maxRunwayLen) * (minDimension - 190);
   }
 
   render() {

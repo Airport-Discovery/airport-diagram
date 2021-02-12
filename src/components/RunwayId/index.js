@@ -46,10 +46,20 @@ class RunwayId extends React.Component {
 
     if (idx === 1) transform = `translate(0, -${t}) rotate(180)`;
 
-    const textX = idx === 1 ? (-1 * width) / 4 : (-1 * width) / 1;
+    const textX = idx === 1 ? (-1 * width) / 4 : (-1 * width) / 4;
     return (
-      <g className={`runway-id ${className ? className : ''}`} transform={transform}>
-        <text className={`runway-text ${textClassName ? textClassName : ''}`} x={textX} y={0 - 2}>
+      <g
+        className={`runway-id ${className ? className : ''}`}
+        transform={transform}
+        onClick={() => this.adjustOverlapedTexts()}
+        data-id={`${name}-${idx}`}
+      >
+        <text
+          className={`runway-text ${textClassName ? textClassName : ''}`}
+          x={textX}
+          y={idx === 1 ? 0 - 2 : 11}
+          transform={idx !== 1 ? 'rotate(180)' : ''}
+        >
           {name}
         </text>
         {showPatternIndicator && (
