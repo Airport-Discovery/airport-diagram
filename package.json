@@ -1,6 +1,6 @@
 {
   "name": "@airport-discovery/airport-diagram",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Airport runways diagram based on Geo Coordinates 📍 for React.",
   "main": "lib/index.js",
   "repository": {
