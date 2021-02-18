@@ -11,9 +11,10 @@ class Airport extends React.Component {
     super(props);
     this.init(props);
 
+    this.adjustTextCollisions = this.adjustTextCollisions.bind(this);
     this.onTooltipShow = this.onTooltipShow.bind(this);
     this.onTooltipHide = this.onTooltipHide.bind(this);
-    this.adjustTextCollisions = this.adjustTextCollisions.bind(this);
+    this.onClick = this.onClick.bind(this);
 
     this.adjusted = {};
 
@@ -73,6 +74,14 @@ class Airport extends React.Component {
 
   componentDidMount() {
     this.adjustTextCollisions();
+  }
+
+  onClick() {
+    const { onClick } = this.props;
+
+    if (onClick && typeof onClick === 'function') {
+      onClick();
+    }
   }
 
   onTooltipShow(event, text) {
@@ -187,6 +196,7 @@ class Airport extends React.Component {
           xmlns="http://www.w3.org/2000/svg"
           style={airportStyle}
           className={className && className}
+          onClick={this.onClick}
         >
           {childrenWithProps}
         </svg>
@@ -207,10 +217,11 @@ class Airport extends React.Component {
 }
 
 Airport.propTypes = {
-  width: PropTypes.number,
-  height: PropTypes.number,
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   className: PropTypes.string,
   tooltipClassName: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 export default Airport;

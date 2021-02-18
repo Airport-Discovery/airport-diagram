@@ -18,6 +18,9 @@ rows:
   - Props: tooltipClassName
     Type: string
     Description: runway tooltip css class name
+  - Props: onClick
+    Type: function
+    Description: onClick event
 ```
 
 ## `<Runway>`
