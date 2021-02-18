@@ -2,6 +2,8 @@
 
 Airport runways diagram based on Geo Coordinates 📍 for React.
 
+![alt mxp](https://airport-discovery.github.io/airport-diagram/assets/mxp.png)
+
 Please read the [documentation](https://airport-discovery.github.io/airport-diagram/) and check out the [demo](https://airport-discovery.github.io/airport-diagram/#/demo) for more usage instructions.
 
 ## Installation
